@@ -1,0 +1,116 @@
+.about-container{
+        width: 100%;
+    /* background-color: #f2f2f2; */
+    height: 100vh;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.about-heading{
+    font-family: Georgia, serif !important;
+    font-size: 3rem;
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.about-content{
+    font-size: 1rem;
+    font-family: 'Open Sans',sans-serif;
+    padding: 10%;
+    line-height: 2.3rem;
+    text-align: center;
+}
+
+.dummy{
+    width: 100%;
+    /* background-color: white; */
+    padding: 60px 0px;
+}
+
+.second-cotainer{
+    margin: 50px auto;
+    width: 90%;
+    /* border: 0.1px solid black; */
+    padding-bottom: 80px;
+}
+
+.profile-container{
+    margin-top:10rem;
+    /* margin-inline: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media (max-width: 860px){
+        flex-direction: ${props=>props.bool ? 'column':'column-reverse'};
+        align-items: center;
+    }
+}
+.col{
+    position: relative;
+}
+.col-rev{
+    position: relative;
+}
+.profile-box{
+    background-color: #f2f2f2;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 120px;
+}
+.profile-box img{
+    position: relative;
+    filter: grayscale(80%);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    z-index: 3;
+    top: -85px;
+    left: calc(50% - 85px);
+    overflow: hidden;
+}
+.profile-name{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 24px auto 0;
+    font-family: Georgia, serif !important;
+    text-align: center;
+}
+.profile-quote{
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+}
+.socialmedia-container{
+    margin: 30px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content:center;
+}
+
+@media (max-width: 860px){
+    .profile-container{
+        align-items: center;
+    }
+    .col{
+        flex-direction: column;
+    }
+    .col-rev{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width:500px) {
+    .profile-box{
+        width: 90%;
+    }
+}
