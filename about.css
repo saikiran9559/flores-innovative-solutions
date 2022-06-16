@@ -1,14 +1,19 @@
 .about-container{
-        width: 100%;
-    /* background-color: #f2f2f2; */
-    height: 100vh;
+    width: 100%;
     color:black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
 }
-
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex img{
+    width: 500px;
+}
 .about-heading{
     font-family: Georgia, serif !important;
     font-size: 3rem;
@@ -17,11 +22,10 @@
 }
 
 .about-content{
+    width: 40%;
     font-size: 1rem;
     font-family: 'Open Sans',sans-serif;
-    padding: 10%;
     line-height: 2.3rem;
-    text-align: center;
 }
 
 .dummy{
@@ -137,6 +141,17 @@
 }
 @media (max-width:500px) {
     .profile-box{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1040px) {
+    .flex{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .flex .about-content{
         width: 90%;
     }
 }

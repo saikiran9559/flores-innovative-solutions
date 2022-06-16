@@ -15,8 +15,11 @@
                 <div class="logo"><img src="/assets/log1.png"/></div>
                 <div class="title">Flores Innovative Solutions</div>
            </div>
-            <svg id="menu-icon" onload="hidemenu()" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="30px" height="30px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
-           <div class="buttons-container">
+            <svg id="menu-icon" onclick="show_hide_menu()" fill="white" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="30px" height="30px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
+           <div id="btn-container" class="buttons-container">
+                <div  class="cross-ctn">
+                    <?xml version="1.0"?><svg  onclick="show_hide_menu()" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
+                </div>
                 <div class="button">Home</div>
                 <div class="button">Products</div>
                 <div class="button">About Us</div>
@@ -26,13 +29,13 @@
         <!-- slider -->
         <div class="slider">
 		<!-- fade css -->
-		<div class="myslide">
+		<div class="myslide"  style="display: block;">
 			<div class="txt">
                 <h1>Health Care</h1>
 				<p>About the Technology</p>
 			</div>
             <div class="fade">
-			<img src="/assets/assets/healthcare2.jpg" style="width: 100%; height: 100%;">
+                <img src="/assets/assets/healthcare.jpg"/>
             <div class="fade2"></div>
             </div>
 		</div>
@@ -116,12 +119,15 @@
         <section>
             <div class="about-container">
                 <div class="about-heading"> About Us</div>
+                <div class="flex">
+                <img src="/assets/9.jpg"/>
                 <div class="about-content">
                     It is a long established fact that a reader will be distracted by the readable content of a page when 
                     looking at its layout. The point of using Lorem Ipsum is that it has a 
                     more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making 
                     it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved 
                     over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+                </div>
                 </div>
             </div>
                 <div class="dummy">
@@ -225,25 +231,40 @@
                 <div class="message-us">
                     <div class="intro-heading"> Send Us Message</div>
                     <div class="two-div">
-                        <div class="input-box">
-                            <label  class="label">Name</label>
-                            <input name="name"/>
+                        <div class="form">
+                            <input name="name" required/>
+                            <label  class="label-name">
+                                <span class="content-name">Name</span>
+                            </label>
                         </div>
-                        <div class="input-box">
-                            <label  class="label">Email</label>
-                            <input name="email" type="email"/>
+                        <div class="form">
+                            <input name="email" required/>
+                            <label  class="label-name">
+                                <span class="content-name">Email</span>
+                            </label>
                         </div>
                     </div>
                     <div class="two-div">
-                        <div class="input-box">
-                            <label  class="label">Phone Number</label>
-                            <input name="tel" type="tel"/>
+                        <div class="form">
+                            <input name="tel" required/>
+                            <label  class="label-name">
+                                <span class="content-name">Phone Number</span>
+                            </label>
                         </div>
-                        <div class="input-box">
-                            <label  class="label">Company Name</label>
-                            <input name="company_name" type="text"/>
+                        <div class="form">
+                            <input name="text" required/>
+                            <label  class="label-name">
+                                <span class="content-name">Company</span>
+                            </label>
                         </div>
                     </div>
+
+                        <div class="form" style="width: 100%;">
+                            <input name="text" required/>
+                            <label  class="label-name">
+                                <span class="content-name">Subject</span>
+                            </label>
+                        </div>
                     <div class="input-box2">
                         <label  class="label">Message</label>
                         <textarea name="message" type="text"></textarea>
@@ -273,5 +294,6 @@
         </div>
         </div>
         <script src="script.js" ></script>
+        <script src="menu.js"></script>
     </body>
 </html>

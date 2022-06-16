@@ -1,3 +1,6 @@
+#menu-icon{
+    display: none;
+}
 .navbar-container{
     z-index: 10;
     position: absolute;
@@ -42,6 +45,7 @@
     gap: 30px;
     transition: 0.2s;
     overflow: hidden;
+    justify-content: end;
 }
 
 .cross-container{
@@ -74,7 +78,12 @@
 #menu-icon svg{
     fill: white;
 }
-
+.cross-ctn{
+    display: none;
+}
+.cross-ctn svg{
+    cursor: pointer;
+}
 @media (max-width: 890px){
     .buttons-container{
         align-items: center;
@@ -86,5 +95,16 @@
         top: 0px;
         right: 0px;
         flex-direction: column;
+        justify-content: start;
+    }
+    .cross-ctn{
+        max-width: 100%;
+        min-width: 95%;
+        display: flex;
+        justify-content: end;
+        padding: 20px;
+    }
+    #menu-icon{
+        display: block;
     }
 }

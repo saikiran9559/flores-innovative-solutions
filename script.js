@@ -23,11 +23,11 @@ slidefun(counter);
 
 let timer = setInterval(autoSlide, 5000);
 
-let menu=false;
-function hidemenu()  {  
-    console.log("hide menu function running..");
-    menu=false;
-    document.getElementById("menu-icon").style.visibility="hidden";  
-}
+// let menu=false;
+// function hidemenu()  {  
+//     console.log("hide menu function running..");
+//     menu=false;
+//     document.getElementById("menu-icon").style.visibility="hidden";  
+// }
 
 //slider code
