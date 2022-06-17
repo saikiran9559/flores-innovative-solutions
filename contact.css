@@ -199,8 +199,8 @@
         width: calc(100% - 80px);
     }
     .message-us{
-        width: none;
-        max-width: none;
+        width: calc(100% - 80px);
+        max-width: auto;
     }
 }
 
